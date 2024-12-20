@@ -6,12 +6,12 @@ pipeline {
         }
     }
 
-    stages {
-        stage('Vérifier Newman') {
+     stages {
+        stage('Build') {
             steps {
-                echo 'Vérification de la version de Newman...'
-                sh 'newman -v'
+                echo 'Building...'
             }
         }
     }
 }
+
