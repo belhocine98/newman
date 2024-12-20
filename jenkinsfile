@@ -1,0 +1,17 @@
+pipeline {
+    agent {
+        docker {
+            image 'postman/newman'
+            
+        }
+    }
+
+    stages {
+        stage('Vérifier Newman') {
+            steps {
+                echo 'Vérification de la version de Newman...'
+                sh 'newman -v'
+            }
+        }
+    }
+}
